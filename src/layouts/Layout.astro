@@ -1,0 +1,38 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import '@fontsource-variable/outfit';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--white: hsl(0, 0%, 100%);
+		--light_gray: hsl(212, 45%, 89%);
+		--grayish_blue: hsl(220, 15%, 55%);
+		--dark_blue: hsl(218, 44%, 22%);
+	}
+	html {
+		font-family: system-ui, sans-serif;	
+	}
+	body {
+		background: var(--light_gray);
+		font-family: 'Outfit Variable', sans-serif;
+	}
+</style>

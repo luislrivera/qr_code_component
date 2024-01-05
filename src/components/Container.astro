@@ -1,0 +1,22 @@
+---
+import QR from "../images/image-qr-code.png"
+import { Image } from "astro:assets";
+---
+
+<section class="p-4 rounded-xl w-72 h-max shadow-xl">
+    <section>
+        <Image class="rounded-xl" src={QR} alt="Código qr de Frontend Mentor" />
+    </section>
+    <section class="text-center mt-4">
+        <h1 class="font-bold text-xl mb-4">Improve your front-end skills by building projects</h1>
+        <p class="opacity-70">Scan the QR code to visit Frontend Mentor and take your coding skill to next level</p>
+    </section>
+</section>
+<style>
+    section {
+        background: var(--white);
+    }
+    .qr {
+        background: #09F;
+    }
+</style>
